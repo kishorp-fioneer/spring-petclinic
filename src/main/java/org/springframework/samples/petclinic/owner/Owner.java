@@ -35,6 +35,8 @@ import org.springframework.beans.support.PropertyComparator;
 import org.springframework.core.style.ToStringCreator;
 import org.springframework.samples.petclinic.model.Person;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Simple JavaBean domain object representing an owner.
  *
@@ -60,6 +62,7 @@ public class Owner extends Person {
 	@Digits(fraction = 0, integer = 10)
 	private String telephone;
 
+	@JsonIgnore
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner", fetch = FetchType.EAGER)
 	private Set<Pet> pets;
 
