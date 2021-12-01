@@ -1,6 +1,5 @@
 package org.springframework.samples.petclinic;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +15,14 @@ public class OwnersRestController {
 	@Autowired
 	private OwnersJpaRepository ownersRepository;
 
-	
 	@ResponseBody
 	@GetMapping("/api/owners")
 	public List<Owner> getOwners() {
-		
+
 		List<Owner> list = ownersRepository.findAll();
 		System.out.println(list);
 		return ownersRepository.findAll();
 
 	}
+
 }

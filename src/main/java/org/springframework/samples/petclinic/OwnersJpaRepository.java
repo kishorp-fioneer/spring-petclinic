@@ -19,5 +19,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.samples.petclinic.owner.Owner;
 
 public interface OwnersJpaRepository extends JpaRepository<Owner, Integer> {
-	
+
 }
